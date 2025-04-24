@@ -1,0 +1,9 @@
+{
+  "name": "title",
+  "short_name": "title",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1e81b0",
+  "theme_color": "#ff0000",
+  "orientation": "portrait-primary"
+}

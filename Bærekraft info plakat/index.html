@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Bærekraft</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="styles.css">
+  
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/x-icon" href="">
+</head>
+<body>
+<div>
+
+<span id="logo" onclick="transitionToPage('../index.html')">
+    <img src="Assets/Photos/logo.png" alt="" style="    position: absolute;
+    font-size: 2vw;
+    z-index: 100;
+    width: 20vmin;
+    height:20vmin;
+    outline: none;
+    top: 0px;
+    left: 0px;"/>
+</span>
+
+
+<div id="gradient"></div>
+<img id="earth" src="Assets\Photos\world-globe-earth-map-png.webp" alt="" oncontextmenu="disableRightClick(event)" ondragstart="disableImageDrag(event)">
+
+<div id="startmenu">
+<h1>Hva er bærekraft?</h1>
+<div class="box">
+    <p>Bærekraft er et ord som i dag vanligvis betyr at noe passer med idealet om bærekraftig utvikling. En bærekraftig utvikling vil si en utvikling som tilfredsstiller behovene til menneskene som lever nå, uten å ødelegge fremtidige generasjoners muligheter til å tilfredsstille sine behov.</p>
+    <p class="citation"> - <a href="https://snl.no/b%C3%A6rekraft" target="_blank">https://snl.no/bærekraft</a> (10.06.2024)</p>
+    <button type="button" class="start" onclick="startGame()">Start spill</button>
+</div>
+</div>
+
+
+<div id="tutorial">
+<h2>Tenk deg at du styrer for landet Norge.<br>Dette handler om mat folkens.<br>Lykke til!</h2>
+<button type="button center" onclick="tutorialDone()">Jeg er klar</button>
+</div>
+
+
+<div id="spill">
+    
+<div id="slide1">
+<h2>1. Olje slipper ut klimagasser. Hva skal vi gjøre?</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Stoppe all olje-utvinning</button>
+<button class="griditems slot2" onclick="chooseSlot2()">Sakke ned på utvinningen, og gjøre det obligatorisk med elbil</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Fortsette å bruke olje som vanlig</button>
+</div>
+</div>
+
+<div id="slide2">
+<h2>2. Trær fjerner CO2 fra lufta</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Få alle i verden til å plante et tre</button>
+<button class="griditems slot2" onclick="chooseSlot2()">Alle i verden må donere for 10 trær til en veldedighet</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Hvem spurte egentlig?</button>
+</div>
+</div>
+
+<div id="slide3">
+<h2>3. Air conditioner er dumt!</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Alle må kaste air conditionerne sine</button>
+<button class="griditems slot2" onclick="chooseSlot2()">Air conditioner er obligatorisk, alle må ha det</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Air conditioner blir ulovlig men de som har det kan fortsatt ha det</button>
+</div>
+</div>
+
+<div id="slide4">
+<h2>4. Kina produserer ueffektivt og skaper mye gasser</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot2()">Sanksjoner til Kina</button>
+<button class="griditems slot2" onclick="chooseSlot1()">Slette Kina (China fakes everything)</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Når spurte jeg?</button>
+</div>
+</div>
+
+<div id="slide5">
+<h2>5. ATOMBOMBER</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Man må nå drepe en person for å skyte en atombombe</button>
+<button class="griditems slot2 smalltext" onclick="chooseSlot2()">Alle må fjerne atombombene sine, også invaderer alle landene til hverandre for å sjekke om de har flere atombomber</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Bygg hydrogenbomber som er verre</button>
+</div>
+</div>
+
+<div id="slide6">
+<h2>6. Det er plast i havet!</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Alle må plukke 10 biter plast hver dag, ellers "Har havnet i fengsel"</button>
+<button class="griditems slot2" onclick="chooseSlot2()">Vi fortsetter å ha det som vanlig (😂😂💀)</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Vi gir 1000kr skatt hvert år til maskiner som fanger plast</button>
+</div>
+</div>
+
+<div id="slide7">
+<h2>7. Kjøtt er CO2</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Vi må slutte å få flere kuer, i stedet for få folk til å lage mer smakfull mat med grønnsaker</button>
+<button class="griditems slot2" onclick="chooseSlot2()">Vi fjerner rødt kjøtt men lar alt annet være</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Alt blir vanlig</button>
+</div>
+</div>
+
+<div id="slide8">
+<h2>8. Biler er bevegende dødsmaskiner og de produserer CO2
+</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Traktor tid🚜🚜</button>
+<button class="griditems slot2" onclick="chooseSlot2()">Båter i stedet for fly🚢🚢⛵</button>
+<button class="griditems slot3" onclick="chooseSlot3()">De må begynne å sykle alle sammen🚲🚲</button>
+</div>
+</div>
+
+<div id="slide9">
+<h2>9. Avskogning, folk bygger hus med trær og bygger gårder</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Vi må plante trærne som vi hogger ned</button>
+<button class="griditems slot2" onclick="chooseSlot2()">Reinskogene må stå i det minste, alt annet kan vi hogge</button>
+<button class="griditems slot3" onclick="chooseSlot3()">La oss ha det gøy med moderne hus🤑💵💵🏘️</button>
+</div>
+</div>
+
+<div id="slide10">
+<h2>10. Overpopulasjon</h2>
+
+<div class="grid">
+<button class="griditems slot1" onclick="chooseSlot1()">Eliminere mange mennesker</button>
+<button class="griditems slot2" onclick="chooseSlot2()">Utslette folk som har lite IQ💀💀 (ulovlig)</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Jeg vil ikke dø, så vi begynner å bo på havet</button>
+</div>
+</div>
+
+
+
+</div>
+
+<div id="barer">
+<div id="luksusbar"></div>
+<div id="luksusbarfill"></div>
+<div id="luksustext"></div>
+
+<div id="klimabar"></div>
+<div id="klimabarfill"></div>
+<div id="klimatext"></div>
+</div>
+
+
+<div id="end">
+<h1>Bra jobba!</h1>
+
+</div>
+
+
+</div>
+<script>
+const earth = document.getElementById("earth")
+const barer = document.getElementById("barer")
+const startmenu = document.getElementById("startmenu")
+const tutorial = document.getElementById("tutorial")
+const spill = document.getElementById("spill")
+const slide1 = document.getElementById("slide1")
+const slide2 = document.getElementById("slide2")
+const slide3 = document.getElementById("slide3")
+const slide4 = document.getElementById("slide4")
+const slide5 = document.getElementById("slide5")
+const slide6 = document.getElementById("slide6")
+const slide7 = document.getElementById("slide7")
+const slide8 = document.getElementById("slide8")
+const slide9 = document.getElementById("slide9")
+const slide10 = document.getElementById("slide10")
+const luksusbarfill = document.getElementById("luksusbarfill")
+const klimabarfill = document.getElementById("klimabarfill")
+const luksustext = document.getElementById("luksustext")
+const klimatext = document.getElementById("klimatext")
+const end = document.getElementById("end")
+
+let slide = 1;
+let luksus = 100;
+let klima = 0;
+
+updateFill();
+
+spill.style.display = "none";
+tutorial.style.display = "none";
+slide1.style.display = "none";
+slide2.style.display = "none";
+slide3.style.display = "none";
+slide4.style.display = "none";
+slide5.style.display = "none";
+slide6.style.display = "none";
+slide7.style.display = "none";
+slide8.style.display = "none";
+slide9.style.display = "none";
+slide10.style.display = "none";
+end.style.display = "none";
+barer.style.display = "none";
+
+
+function startGame() {
+    earth.style.top = "60vh";
+    startmenu.style.display = "none";
+    tutorial.style.display = "block";    
+}
+
+function tutorialDone() {
+    spill.style.display = "block";
+    slide1.style.display = "block";
+    tutorial.style.display = "none";
+    barer.style.display = "block";
+}
+
+function nextSlide() {
+    slide += 1;
+    if (slide == 2) {
+    slide1.style.display = "none";
+    slide2.style.display = "block";
+    }
+
+    if (slide == 3) {
+    slide2.style.display = "none";
+    slide3.style.display = "block";
+    }
+
+    if (slide == 4) {
+    slide3.style.display = "none";
+    slide4.style.display = "block";
+    }
+
+    if (slide == 5) {
+    slide4.style.display = "none";
+    slide5.style.display = "block";
+    }
+
+    if (slide == 6) {
+    slide5.style.display = "none";
+    slide6.style.display = "block";
+    }
+
+    if (slide == 7) {
+    slide6.style.display = "none";
+    slide7.style.display = "block";
+    }
+
+    if (slide == 8) {
+    slide7.style.display = "none";
+    slide8.style.display = "block";
+    }
+
+    if (slide == 9) {
+    slide8.style.display = "none";
+    slide9.style.display = "block";
+    }
+
+    if (slide == 10) {
+    slide9.style.display = "none";
+    slide10.style.display = "block";
+    }
+
+    if (slide == 11) {
+    slide10.style.display = "none";
+    spill.style.display = "none";
+    end.style.display = "block";
+    }
+}
+
+function chooseSlot1() {
+    if (slide == 1) {
+        klima += 9;
+        luksus += -12;
+    }
+    if (slide == 2) {
+        klima += 3;
+        luksus += -2;
+    }
+    if (slide == 3) {
+        klima += 7;
+        luksus += -6;
+    }
+    if (slide == 4) {
+        klima += 5;
+        luksus += 2;
+    }
+    if (slide == 5) {
+        klima += 4;
+        luksus += 0;
+    }
+    if (slide == 6) {
+        klima += 6;
+        luksus += 5;
+    }
+    if (slide == 7) {
+        klima += 7;
+        luksus += -13;
+    }
+    if (slide == 8) {
+        klima += -7;
+        luksus += -10;
+    }
+    if (slide == 9) {
+        klima += 6;
+        luksus += -1;
+    }
+    if (slide == 10) {
+        klima += 10;
+        luksus += -15;
+    }
+
+    nextSlide();
+    updateFill();
+}
+
+function chooseSlot2() {
+    if (slide == 1) {
+        klima += 4;
+        luksus += -5;
+    }
+    if (slide == 2) {
+        klima += 11;
+        luksus += -15;
+    }
+    if (slide == 3) {
+        klima += 6;
+        luksus += -8;
+    }
+    if (slide == 4) {
+        klima += 8;
+        luksus += -12;
+    }
+    if (slide == 5) {
+        klima += 13;
+        luksus += -10;
+    }
+    if (slide == 6) {
+        klima += 0;
+        luksus += 0;
+    }
+    if (slide == 7) {
+        klima += 4;
+        luksus += -2;
+    }
+    if (slide == 8) {
+        klima += 5;
+        luksus += -6;
+    }
+    if (slide == 9) {
+        klima += 3;
+        luksus += -3;
+    }
+    if (slide == 10) {
+        klima += 15;
+        luksus += -15;
+    }
+
+    nextSlide();
+    updateFill();
+}
+
+function chooseSlot3() {
+    if (slide == 1) {
+        klima += 0;
+        luksus += -0;
+    }
+    if (slide == 2) {
+        klima += -1;
+        luksus += -1;
+    }
+    if (slide == 3) {
+        klima += 5;
+        luksus += -4;
+    }
+    if (slide == 4) {
+        klima += 0;
+        luksus += 0;
+    }
+    if (slide == 5) {
+        klima += -50;
+        luksus += -50;
+    }
+    if (slide == 6) {
+        klima += 15;
+        luksus += -4;
+    }
+    if (slide == 7) {
+        klima += 0;
+        luksus += 0;
+    }
+    if (slide == 8) {
+        klima += 9;
+        luksus += 5;
+    }
+    if (slide == 9) {
+        klima += 0;
+        luksus += 1;
+    }
+    if (slide == 10) {
+        klima += 4;
+        luksus += -3;
+    }
+
+    nextSlide();
+    updateFill();
+}
+
+function updateFill() {
+    luksusbarfill.style.width = Math.abs(luksus) * 0.8 + "vw";
+    klimabarfill.style.width = Math.abs(klima) * 0.8 + "vw";
+    luksustext.innerHTML = "Luksus: " + luksus;
+    klimatext.innerHTML = "Klima: " + klima;
+}
+
+
+  // Function to disable right-click menu
+  function disableRightClick(event) {
+      event.preventDefault(); // Prevent default right-click menu
+  }
+
+  // Function to disable image dragging
+  function disableImageDrag(event) {
+      event.preventDefault(); // Prevent default image drag behavior
+  }
+
+</script>
+
+<script src="../index.js"></script>
+
+</body>
+
+</html>

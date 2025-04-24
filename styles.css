@@ -1,0 +1,177 @@
+:root {
+    --white: #f4f4f4;
+    --off-white: #ccd9d8;
+    --black: #181818;
+    --half-invis: #00000054;
+    --half-invis-light: #43434354;
+    --invis: #00000000;
+    --secondarl: #adacac;
+    --secondary: #9e9e9e;
+    --secondark: #6b6b6b;
+    --thirdarl: #3dff37;
+    --thirdary: #22e14b;
+    --thirdark: #15b728;
+} 
+
+* {
+    font-family: sans-serif;
+    /*Remove scrollbars*/
+    overflow-x: hidden;
+    scrollbar-width: none;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 2rem;
+    color: white;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html {
+    font-size: clamp(14px, 4vw, 30px);
+}
+
+body {
+    color: var(--black);
+    background-color: white;
+    opacity: 0;
+    transition: opacity .4s;    
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+#logo {
+    z-index: 1;
+    width: 3rem;
+    height: 3rem;
+    background-image: url(logo.png);
+    background-size: cover;
+}
+.branded-bg {
+    z-index: -2;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(graybg.avif);
+    background-position: center top; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.alt-branded-bg {
+    z-index: -2;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/images/branding/liverreal-bg.png);
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.branded-bg-overlay {
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), linear-gradient(var(--invis), var(--invis) 50%);
+    background-position: center top; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+img.ad {
+    margin-top: 3rem;
+    width: 80vw;
+    height: auto;
+    overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    max-width: 960px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0.5rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+a {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.button-test {
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    will-change: transform;
+    margin: 0.2rem;
+    padding: 0.5rem 0.5rem;
+    text-shadow: 1.5px 1.5px 0px var(--thirdark), 0px 1.5px 0px var(--thirdark), -1.5px 1.5px 0px var(--thirdark);
+    background-image: linear-gradient(var(--invis), var(--secondark));
+    background-color: var(--secondary);
+    transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+    text-align: center;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to bottom, var(--thirdary), var(--thirdark));
+    border-radius: 10px;
+
+    filter: drop-shadow(5px 5px 0px var(--half-invis));
+
+}
+
+.button-test:hover {
+    transform: scale(0.99) translateZ(0);
+    background-color: var(--secondarl);
+}
+
+.button-test:active {
+    transform: scale(1.1) translateZ(0);
+    z-index: 5;
+}
+
+.spill {
+    width: 100vw;
+    max-width: calc(960px - 1.4rem);
+    margin: auto;
+}
+
+#bar {
+    position: fixed;
+    width: 100vw;
+    height: 3rem;
+    background-color: white;
+}
+
+.simple-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 3fr;
+}
