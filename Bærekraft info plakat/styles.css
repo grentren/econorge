@@ -205,3 +205,22 @@ background-image: linear-gradient(0,rgb(0, 166, 255), rgb(25, 25, 25));
     left: 11vw;
     line-height: 5vh;
 }
+#logo {
+    position: absolute;
+    z-index: 100;
+    width: 10rem;
+    height:10rem;
+    top: 0px;
+    left: 0px;
+    transition: all 0.5s;
+  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+}
+
+#logo:hover {
+    filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+}
+
+#logoimg {
+    width: 10rem;
+    height: 10rem;
+}
