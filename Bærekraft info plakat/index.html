@@ -4,7 +4,7 @@
         <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Bærekraft</title>
+    <title>EcoSpill™</title>
     <meta name="description" content="">
     <meta name="author" content="">
   
@@ -18,7 +18,7 @@
   
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/x-icon" href="../logo.ico">
 </head>
 <body>
 <div>
@@ -27,14 +27,15 @@
     <img src="Assets/Photos/logo.png" alt="" id="logoimg"/>
 </span>
 
-
+<p id="ver">HTML CSS HTM AVif Ico PNG JS CSS JPG Tankesvm Affiliated Open Beta v28.1.1.10.02.3 d2025.25.04 Bugfix 32 Limited Edition Lite Eco Education Edition iPhoney Passion Max Pro e16 S C 5G iPhone 3G Touchscreen Motorola 21 Editor Edition Version Pro Debug Mode Max 20 Fruit™ Merge™ LiverReal™ Sponsored™ JavaScript™ EcoNorge™™</p>
 <div id="gradient"></div>
 <img id="earth" src="Assets\Photos\world-globe-earth-map-png.webp" alt="" oncontextmenu="disableRightClick(event)" ondragstart="disableImageDrag(event)">
 
 <div id="startmenu">
-<h1>Hva er bærekraft?</h1>
+<p id="info"> <- dette er tilbakeknappen</p>
+<h1>Hvordan mater vi verden?</h1>
 <div class="box">
-    <p>Bærekraft er et ord som i dag vanligvis betyr at noe passer med idealet om bærekraftig utvikling. En bærekraftig utvikling vil si en utvikling som tilfredsstiller behovene til menneskene som lever nå, uten å ødelegge fremtidige generasjoners muligheter til å tilfredsstille sine behov.</p>
+    <p>En bærekraftig utvikling vil si en utvikling som fyller behovene til menneskene som lever nå, uten å ødelegge fremtidige generasjoners muligheter til å fylle sine behov.</p>
     <p class="citation"> - <a href="https://snl.no/b%C3%A6rekraft" target="_blank">https://snl.no/bærekraft</a> (10.06.2024)</p>
     <button type="button" class="start" onclick="startGame()">Start spill</button>
 </div>
@@ -65,7 +66,7 @@
 <div class="grid">
 <button class="griditems slot1" onclick="chooseSlot1()">Få alle i verden til å plante et tre</button>
 <button class="griditems slot2" onclick="chooseSlot2()">Alle i verden må donere for 10 trær til en veldedighet</button>
-<button class="griditems slot3" onclick="chooseSlot3()">Hvem spurte egentlig?</button>
+<button class="griditems slot3" onclick="chooseSlot3()">Fader</button>
 </div>
 </div>
 
@@ -158,15 +159,13 @@
 <div id="luksusbar"></div>
 <div id="luksusbarfill"></div>
 <div id="luksustext"></div>
-
-<div id="klimabar"></div>
-<div id="klimabarfill"></div>
-<div id="klimatext"></div>
 </div>
 
 
 <div id="end">
 <h1>Bra jobba!</h1>
+<h2>Rekorden er: ingenting</h1>
+<p class="center">fortell oss rekorden jeg updater</p>
 
 </div>
 
@@ -189,14 +188,11 @@ const slide8 = document.getElementById("slide8")
 const slide9 = document.getElementById("slide9")
 const slide10 = document.getElementById("slide10")
 const luksusbarfill = document.getElementById("luksusbarfill")
-const klimabarfill = document.getElementById("klimabarfill")
 const luksustext = document.getElementById("luksustext")
-const klimatext = document.getElementById("klimatext")
 const end = document.getElementById("end")
 
 let slide = 1;
-let luksus = 100;
-let klima = 0;
+let luksus = 0;
 
 updateFill();
 
@@ -285,44 +281,34 @@ function nextSlide() {
 
 function chooseSlot1() {
     if (slide == 1) {
-        klima += 9;
-        luksus += -12;
+        luksus += 12;
     }
     if (slide == 2) {
-        klima += 3;
-        luksus += -2;
+        luksus += 2;
     }
     if (slide == 3) {
-        klima += 7;
-        luksus += -6;
+        luksus += 6;
     }
     if (slide == 4) {
-        klima += 5;
         luksus += 2;
     }
     if (slide == 5) {
-        klima += 4;
         luksus += 0;
     }
     if (slide == 6) {
-        klima += 6;
         luksus += 5;
     }
     if (slide == 7) {
-        klima += 7;
-        luksus += -13;
+        luksus += 13;
     }
     if (slide == 8) {
-        klima += -7;
-        luksus += -10;
+        luksus += 10;
     }
     if (slide == 9) {
-        klima += 6;
-        luksus += -1;
+        luksus += 1;
     }
     if (slide == 10) {
-        klima += 10;
-        luksus += -15;
+        luksus += 15;
     }
 
     nextSlide();
@@ -331,44 +317,34 @@ function chooseSlot1() {
 
 function chooseSlot2() {
     if (slide == 1) {
-        klima += 4;
-        luksus += -5;
+        luksus += 5;
     }
     if (slide == 2) {
-        klima += 11;
-        luksus += -15;
+        luksus += 15;
     }
     if (slide == 3) {
-        klima += 6;
-        luksus += -8;
+        luksus += 8;
     }
     if (slide == 4) {
-        klima += 8;
-        luksus += -12;
+        luksus += 12;
     }
     if (slide == 5) {
-        klima += 13;
-        luksus += -10;
+        luksus += 10;
     }
     if (slide == 6) {
-        klima += 0;
         luksus += 0;
     }
     if (slide == 7) {
-        klima += 4;
-        luksus += -2;
+        luksus += 2;
     }
     if (slide == 8) {
-        klima += 5;
-        luksus += -6;
+        luksus += 6;
     }
     if (slide == 9) {
-        klima += 3;
-        luksus += -3;
+        luksus += 3;
     }
     if (slide == 10) {
-        klima += 15;
-        luksus += -15;
+        luksus += 15;
     }
 
     nextSlide();
@@ -377,44 +353,34 @@ function chooseSlot2() {
 
 function chooseSlot3() {
     if (slide == 1) {
-        klima += 0;
-        luksus += -0;
+        luksus += 0;
     }
     if (slide == 2) {
-        klima += -1;
-        luksus += -1;
+        luksus += 1;
     }
     if (slide == 3) {
-        klima += 5;
-        luksus += -4;
+        luksus += 4;
     }
     if (slide == 4) {
-        klima += 0;
         luksus += 0;
     }
     if (slide == 5) {
-        klima += -50;
-        luksus += -50;
+        luksus += 50;
     }
     if (slide == 6) {
-        klima += 15;
-        luksus += -4;
+        luksus += 4;
     }
     if (slide == 7) {
-        klima += 0;
         luksus += 0;
     }
     if (slide == 8) {
-        klima += 9;
         luksus += 5;
     }
     if (slide == 9) {
-        klima += 0;
         luksus += 1;
     }
     if (slide == 10) {
-        klima += 4;
-        luksus += -3;
+        luksus += 3;
     }
 
     nextSlide();
@@ -423,9 +389,7 @@ function chooseSlot3() {
 
 function updateFill() {
     luksusbarfill.style.width = Math.abs(luksus) * 0.8 + "vw";
-    klimabarfill.style.width = Math.abs(klima) * 0.8 + "vw";
-    luksustext.innerHTML = "Luksus: " + luksus;
-    klimatext.innerHTML = "Klima: " + klima;
+    luksustext.innerHTML = "Poeng: " + luksus;
 }
 
 

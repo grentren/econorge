@@ -224,3 +224,22 @@ background-image: linear-gradient(0,rgb(0, 166, 255), rgb(25, 25, 25));
     width: 10rem;
     height: 10rem;
 }
+
+.center {
+    text-align: center;
+}
+
+#info {
+    position: fixed;
+    left: 11rem;
+    top: 1rem;
+}
+
+#ver {
+    font-size: 0.5rem;
+    color: gray;
+    z-index: 1000;
+    position: fixed;
+    right: 0rem;
+    bottom: 0rem;
+}

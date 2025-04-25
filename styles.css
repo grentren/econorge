@@ -113,7 +113,7 @@ img.ad {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1rem;
     text-align: center;
 }
@@ -128,6 +128,19 @@ h2 {
 p {
     font-size: 1rem;
     margin: 1rem;
+}
+
+li {
+    font-size: 1rem; 
+    margin: 0 0 0 2rem;
+}
+
+ul {
+    font-size: 1rem;
+}
+
+strong {
+    font-size: 1rem;
 }
 
 a {
@@ -183,5 +196,5 @@ a {
 
 .simple-grid {
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr 3fr;
+    grid-template-columns: 1fr 3fr 3fr 3fr 3fr;
 }
