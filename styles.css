@@ -21,7 +21,8 @@
     margin: 0;
     padding: 0;
 
-    font-size: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: white;
 
     -webkit-touch-callout: none;
@@ -114,13 +115,13 @@ img.ad {
 
 h1 {
     font-size: 2rem;
-    margin: 1rem;
+    padding: 1rem;
     text-align: center;
 }
 
 h2 {
     font-size: 1.5rem;
-    margin: 0.5rem;
+    padding: 0.5rem;
     font-weight: 200;
     text-align: center;
 }
@@ -136,11 +137,12 @@ em {
 
 li {
     font-size: 1rem; 
-    margin: 0 0 0 2rem;
+    margin: 0 0 1rem 2rem;
 }
 
 ul {
     font-size: 1rem;
+    margin: 0 0rem 1rem 0;
 }
 
 strong {
@@ -154,7 +156,15 @@ a {
 }
 
 .bax {
-    background-color: #e1dd94cd;
+    border-radius: 20px;
+    background-color: #547f59cd;
+    padding: 0.2rem;
+    margin: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 .button-test {
